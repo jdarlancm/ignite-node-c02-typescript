@@ -4,13 +4,13 @@ import { DataSource, DataSourceOptions } from "typeorm";
 
 const config: DataSourceOptions = {
     "type": "postgres",
-    "port": 5433,
+    "port": 49154,
     "host": "localhost",
     "username": "postgres",
-    "password": "teste123",
+    "password": "postgrespw",
     "database": "rentx",
     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
-    "entities": ["./src/modules/cars/entities/*.ts", "./src/modules/accounts/entities/*.ts"],
+    "entities": ["./src/modules/cars/infra/typeorm/entities/*.ts", "./src/modules/accounts/infra/typeorm/entities/*.ts"],
     "logging": true,
     "synchronize": true,
 }
