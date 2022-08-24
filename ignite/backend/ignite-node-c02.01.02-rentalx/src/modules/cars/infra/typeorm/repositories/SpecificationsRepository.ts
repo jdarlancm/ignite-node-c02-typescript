@@ -1,8 +1,8 @@
 import { Repository } from "typeorm";
+import { AppDataSource } from "../../../../../shared/infra/typeorm";
+import { ICreateSpecificationDTO, ISpecificationsRepository } from "../../../repositories/ISpecificationsRepository";
+import { Specification } from "../entities/Sepecification";
 
-import { AppDataSource } from "../../../../database";
-import { Specification } from "../../entities/Sepecification";
-import { ICreateSpecificationDTO, ISpecificationsRepository } from "../ISpecificationsRepository";
 
 class SpecificationsRepository implements ISpecificationsRepository {
 
