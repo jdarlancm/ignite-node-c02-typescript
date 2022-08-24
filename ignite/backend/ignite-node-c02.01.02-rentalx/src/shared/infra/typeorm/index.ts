@@ -9,7 +9,7 @@ const config: DataSourceOptions = {
     "username": "postgres",
     "password": "teste123",
     "database": "rentx",
-    "migrations": ["./src/database/migrations/*.ts"],
+    "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
     "entities": ["./src/modules/cars/entities/*.ts", "./src/modules/accounts/entities/*.ts"],
     "logging": true,
     "synchronize": true,
@@ -22,7 +22,7 @@ const configDocker: DataSourceOptions = {
     "username": "docker",
     "password": "ignite",
     "database": "rentx",
-    "migrations": ["./src/database/migrations/*.ts"],
+    "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
     "logging": true,
     "synchronize": true,
 }
