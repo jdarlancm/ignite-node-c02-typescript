@@ -6,7 +6,7 @@ Deve ser possível cadastrar um novo carro
 **RN**
 [x] Não deve ser possível cadastrar um carro com uma placa já existente.
 [x] O carro deve ser cadastrado com disponibilidade por padrão.
-\*[] O usuario responsavel pelo cadastro deve ser um usuario administrador.
+[x] O usuario responsavel pelo cadastro deve ser um usuario administrador.
 
 # Listagem de carros
 
