@@ -1,10 +1,10 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
 @Entity("users")
 class User {
 
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn("uuid")
     id: string;
 
     @Column()
@@ -29,11 +29,11 @@ class User {
     created_at: Date;
 
     constructor() {
-        if (!this.id) {
-            this.id = uuidV4();
+        if(!this.id) {
+            this.id = uuidV4(); 
+            this.isAdmin = false;
         }
     }
-
 }
 
 export { User }
