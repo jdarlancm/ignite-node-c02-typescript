@@ -43,7 +43,10 @@ describe("Create Car Specification", () => {
 
         const specifications_id = [sepecification.id];
 
-        await createCarSpecificationUseCase.execute({car_id: car.id, specifications_id});
+        const specificationsCars = await createCarSpecificationUseCase.execute({car_id: car.id, specifications_id});
+        
+        expect(specificationsCars).toHaveProperty("specifications");
+        expect(specificationsCars.specifications.length).toBe(1);
     });
 
 })
