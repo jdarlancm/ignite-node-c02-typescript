@@ -26,7 +26,7 @@ class Rental {
     @Column("timestamp", {default: "now()", nullable: true})
     start_date: Date;
 
-    @Column("timestamp")
+    @Column("timestamp", {nullable: true})
     end_date: Date;
 
     @Column("timestamp")

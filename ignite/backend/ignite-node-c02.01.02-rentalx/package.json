@@ -8,7 +8,7 @@
     "typeorm": "ts-node-dev --transpile-only ./node_modules/typeorm/cli -d ./src/shared/infra/typeorm ",
     "migration:create": "ts-node-dev --transpile-only ./node_modules/typeorm/cli migration:create",
     "migration:run": "ts-node-dev --transpile-only ./node_modules/typeorm/cli -d ./src/shared/infra/typeorm migration:run",
-    "test": "jest",
+    "test": "jest --runInBand --detectOpenHandles",
     "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
   },
   "dependencies": {
