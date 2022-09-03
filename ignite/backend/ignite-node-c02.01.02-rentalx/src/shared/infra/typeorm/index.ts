@@ -4,7 +4,7 @@ import { DataSource, DataSourceOptions } from "typeorm";
 
 const config: DataSourceOptions = {
     "type": "postgres",
-    "port": 49156,
+    "port": 49157,
     "host": "localhost",
     "username": "postgres",
     "password": "postgrespw",
