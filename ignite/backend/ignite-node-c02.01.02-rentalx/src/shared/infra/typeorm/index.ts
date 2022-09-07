@@ -4,10 +4,10 @@ import { DataSource, DataSourceOptions } from "typeorm";
 
 const config: DataSourceOptions = {
     "type": "postgres",
-    "port": 49157,
+    "port": 5433,
     "host": "localhost",
     "username": "postgres",
-    "password": "postgrespw",
+    "password": "teste123",
     "database": process.env.NODE_ENV === "test" ? "rentx_test" : "rentx",
     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
     "entities": ["./src/modules/cars/infra/typeorm/entities/*.ts", "./src/modules/accounts/infra/typeorm/entities/*.ts", "./src/modules/rentals/infra/typeorm/entities/*.ts"],
@@ -15,14 +15,15 @@ const config: DataSourceOptions = {
     "synchronize": true,
 }
 
-const configDocker: DataSourceOptions = {
+const configHome: DataSourceOptions = {
     "type": "postgres",
-    "port": 5432,
-    "host": "database",
+    "port": 5433,
+    "host": "localhost",
     "username": "docker",
     "password": "ignite",
     "database": "rentx",
     "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
+    "entities": ["./src/modules/cars/infra/typeorm/entities/*.ts", "./src/modules/accounts/infra/typeorm/entities/*.ts", "./src/modules/rentals/infra/typeorm/entities/*.ts"],
     "logging": true,
     "synchronize": true,
 }
